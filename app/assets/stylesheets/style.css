@@ -1,0 +1,24 @@
+.info_box {
+	width: 960px;
+	border: 1px black solid;
+}
+
+.index_box {
+	border: 1px black solid;
+	display: inline-block;
+}
+
+#name_box {
+	border: 1px black solid;
+	width: auto;
+}
+
+#description_box {
+	border: 1px black solid;
+	width: auto;
+}
+
+#price_box {
+	border: 1px black solid;
+	width: auto;
+}

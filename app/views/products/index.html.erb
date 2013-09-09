@@ -4,6 +4,6 @@
 <p id="product_count">We Currently Have <%= @products.length %> Products Available.  Would you care to add a <%= link_to "New Product?", "/products/new" %>
 </p>
 
-<% @products.each do |product| %>
-	<p><%= link_to "#{product.name}", product %></p>
-<% end %> 
+<div class="info_box"><% @products.each do |product| %>
+	<div class="index_box"><%= link_to "#{product.name}", product %></div>
+<% end %> </div>
