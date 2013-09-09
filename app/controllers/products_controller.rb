@@ -32,28 +32,39 @@ class ProductsController < ApplicationController
 
   def create
   	@product = Product.new product_parameters
-
-  	if @product.save
-  		redirect_to products_url
-  	else
-  		render :new
-  	end
+    respond_to do |format|
+    	if @product.save
+    		format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.json { render json: @product, status: :created, location: @product }
+    	else
+    		format.html { render action: "new" }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+    	end
+    end
   end
 
   def update
   	@product = Product.find(params[:id])
 
-  	if @product.update_attributes product_parameters
-  		redirect_to @product
-  	else
-  		render :edit
-  	end
+    respond_to do |format|
+    	if @product.update_attributes product_parameters
+    		format.html { redirect_to @product, notice: 'Product was successfully updated.'}
+        format.json { head :no_content }
+    	else
+    		format.html { render action: "edit" }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+    	end
+    end
   end
 
   def destroy
   	@product = Product.find(params[:id])
   	@product.destroy
-    redirect_to products_url
+    
+    respond_to do |format|
+      format.html { redirect_to products_url }
+      format.json { head :no_content }
+    end
   end
 
   private
