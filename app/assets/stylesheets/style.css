@@ -24,3 +24,14 @@
 	border: 1px black solid;
 	width: auto;
 }
+
+.new_user {
+	border: 1px black solid;
+	float: right;
+
+}
+
+.top {
+	width: 960px;
+	border: 1px black solid;
+}
