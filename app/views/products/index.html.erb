@@ -7,6 +7,6 @@
 </p></div>
 
 <div class="info_box"><% @products.each do |product| %>
-	<div class="index_box"><%= link_to "#{product.name}", product %><br>
+	<div class="index_box"><%= link_to product.name, product %><br>
 		<p>$<%= product.formatted_price %></p></div>
 <% end %>
