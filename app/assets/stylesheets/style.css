@@ -27,15 +27,12 @@
 	width: auto;
 }
 
-.new_user {
-	border: 1px black solid;
-	float: right;
-	clear: right;
-}
 
 .sign_in {
 	border: 1px black solid;
 	float: right;
+	margin-right: 50px;
+	margin-top: 50px;
 }
 
 .top {
@@ -50,4 +47,8 @@
 	width: 1098px;
 	margin: 10px;
 	padding: 10px;
+}
+
+.flash {
+	margin-bottom: 10px;
 }
