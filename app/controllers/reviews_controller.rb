@@ -8,12 +8,12 @@ class ReviewsController < ApplicationController
 
   def create
   	@review = @product.reviews.build params.require(:review).permit(:comment, :product_id, :user_id)
-  	@review.user_id = current_user.id
+    @review.user_id = current_user.id
 
   	if @review.save
-  		redirect_to products_path, notice: 'Review created successfully!'
+  		redirect_to product_path(@product), notice: 'Review created successfully!'
   	else
-  		render :action => :show
+  		redirect_to product_path(@product), notice: 'You\'ve already reviewed this!'
   	end
   end
 
