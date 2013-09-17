@@ -1,0 +1,30 @@
+# ruby encoding: utf-8
+
+jp:
+  products:
+    index:
+      title: レインフォレストなら、たくさん商品が有るよ！
+      status: ユーザー名：
+      log_out: ロッグアウット
+      log_in: ロッグイン
+      sign_up: ユーザー登録
+      current_num: 現在、
+      products_available: つの商品が保存してあります。新しい商品
+      new_product: 作りますか？
+  views:
+    show: 詳細
+    edit: 編集
+    destroy: 削除
+    are_you_sure: よろしいですか？
+    back: 戻る
+    edit: 編集
+    product:
+      index:
+        new_product: 新しい商品
+      edit:
+        title: 商品編集
+      new:
+        title: 新しい商品
+      flash_messages:
+        product_was_successfully_created: '新しい商品を保存しました！'
+        product_was_successfully_updated: '商品が編集されました！'

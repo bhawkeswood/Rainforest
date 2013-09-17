@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
   	@product = Product.new product_parameters
     respond_to do |format|
     	if @product.save
-    		format.html { redirect_to @product, notice: 'Product was successfully created.' }
+    		format.html { redirect_to @product, notice: I18n.t('views.product.flash_messages.product_was_successfully_created') }
         format.json { render json: @product, status: :created, location: @product }
     	else
     		format.html { render action: "new" }
@@ -54,7 +54,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
     	if @product.update_attributes product_parameters
-    		format.html { redirect_to @product, notice: 'Product was successfully updated.'}
+    		format.html { redirect_to @product, notice: I18n.t('views.product.flash_messages.product_was_successfully_updated')}
         format.json { head :no_content }
     	else
     		format.html { render action: "edit" }

@@ -1,0 +1,12 @@
+# ruby encoding: utf-8
+
+jp:
+  activerecord:
+    models:
+      product: '商品'
+    attributes:
+      product:
+        name: '品名'
+        description: '説明'
+        price_in_cents: '価格'
+        

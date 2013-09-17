@@ -1,0 +1,24 @@
+<div class="top"><h1>レインフォレストへようこそ！</h1>
+
+<!-- <div class="language">
+	<b>I18n.locale:</b>
+	<%= I18n.locale %>
+</div> -->
+
+<div class="sign_in">
+      <% if current_user %>
+        アカウント名：<%= current_user.name %>. 
+        <%= link_to "ロッグアウト", session_path("current"), :method => :delete %>
+      <% else %>
+          登録してあれば、<%= link_to "ロッグイン", new_session_path %>、<br/>それか、
+        初めてなら<%= link_to "登録する", new_user_path %>
+      <% end %></div>
+
+<p id="product_count">現在<%= @products.length %>コの商品が保存してある.　<%= link_to "新しい商品", "/products/new" %>
+</p></div>作りますか？
+
+<div class="info_box"><% @products.each do |product| %>
+	<div class="index_box"><div class="name_price"><%= link_to product.name, product %><br><div class="index_pic"><%= link_to image_tag(product.url) %></div>
+		 <p class="price"><%= product.price_in_cents %>円</p></div></div>
+<% end %> 
+

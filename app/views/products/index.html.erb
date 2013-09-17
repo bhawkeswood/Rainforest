@@ -1,11 +1,24 @@
-<div class="top"><h1>Welcome to the Rainforest, where resources are plenty!</h1>
- 
+<div class="top"><h1><%= t '.title' %></h1>
+<!-- 
+<div class="language">
+	<b>I18n.locale:</b>
+	<%= I18n.locale %>
+</div> -->
 
+<div class="sign_in">
+      <% if current_user %>
+        <%= t '.status' %><%= current_user.name %>. 
+        <%= link_to (t'.log_out'), session_path("current"), :method => :delete %>
+      <% else %>
+          <%= link_to (t '.log_in'), new_session_path %><br/>
+        <%= link_to (t '.sign_up'), new_user_path %>
+      <% end %></div>
 
-<p id="product_count">We Currently Have <%= @products.length %> Products Available.  Would you care to add a <%= link_to "New Product?", "/products/new" %>
+<p id="product_count"><%= t '.current_num' %><strong><%= @products.length %></strong><%= t '.products_available' %><%= link_to (t '.new_product'), new_product_path %>
 </p></div>
 
 <div class="info_box"><% @products.each do |product| %>
 	<div class="index_box"><div class="name_price"><%= link_to product.name, product %><br><div class="index_pic"><%= link_to image_tag(product.url) %></div>
-		 <p class="price">$<%= product.formatted_price %></p></div></div>
+		 <p class="price"><%= number_to_currency(product.formatted_price) %></p></div></div>
 <% end %> 
+

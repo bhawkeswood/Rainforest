@@ -20,4 +20,30 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  products:
+    index:
+      title: "Welcome to the Rainforest, where resources are plenty!"
+      status: "Current user:"
+      log_out: "Log out"
+      log_in: "Log in here"
+      sign_up: "Register here"
+      current_num: "Currently, we have "
+      products_available: " products available for viewing.  Would you like to add a "
+      new_product: "New Product?"
+  views:
+    show: Show
+    edit: Edit
+    destroy: Delete
+    are_you_sure: Are you sure?
+    back: Back
+    edit: Edit
+    product:
+      index:
+        new_product: New product
+      edit:
+        title: Edit Product
+      new:
+        title: New product
+      flash_messages:
+        product_was_successfully_created: 'Product was successfully created.'
+        product_was_successfully_updated: 'Product was successfully updated.'

@@ -1,5 +1,5 @@
-<div class="top"><h1>Add a new Product</h1></div>
+<div class="top"><h1><%= t 'views.product.new.title' %></h1></div>
 
 <%= render 'form' %>
 
-<div id="back"><%= link_to 'Back', products_path %></div>
+<div id="back"><%= link_to I18n.t('views.back'), products_path %></div>

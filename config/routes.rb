@@ -10,11 +10,18 @@ Rainforest::Application.routes.draw do
   resources :products do
     resources :reviews, :except => [:index]
   end
+
+  scope "(:locale)", :locale => /en|jp/ do
+    root :to => 'products#index'
+    get "products/index"
+  end
+  
+
   resources :users, :only => [:new, :create]
 
   resources :sessions, :only => [:new, :create, :destroy]
 
-  root :to => "products#index"
+  # root :to => "products#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
