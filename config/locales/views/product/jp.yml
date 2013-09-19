@@ -1,5 +1,5 @@
 # ruby encoding: utf-8
-
+ 
 jp:
   products:
     index:
@@ -25,6 +25,8 @@ jp:
         title: 商品編集
       new:
         title: 新しい商品
+      show:
+        title: ご覧の商品：
       flash_messages:
         product_was_successfully_created: '新しい商品を保存しました！'
         product_was_successfully_updated: '商品が編集されました！'
