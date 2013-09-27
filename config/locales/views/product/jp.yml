@@ -27,6 +27,7 @@ jp:
         title: 新しい商品
       show:
         title: ご覧の商品：
+        price: 価格
       flash_messages:
         product_was_successfully_created: '新しい商品を保存しました！'
         product_was_successfully_updated: '商品が編集されました！'

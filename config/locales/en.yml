@@ -44,6 +44,8 @@ en:
         title: Edit Product
       new:
         title: New product
+      show:
+        title: "Currently Viewing: "
       flash_messages:
         product_was_successfully_created: 'Product was successfully created.'
         product_was_successfully_updated: 'Product was successfully updated.'

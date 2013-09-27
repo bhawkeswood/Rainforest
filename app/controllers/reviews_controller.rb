@@ -10,11 +10,17 @@ class ReviewsController < ApplicationController
   	@review = @product.reviews.build params.require(:review).permit(:comment, :product_id, :user_id)
     @review.user_id = current_user.id
 
-  	if @review.save
-  		redirect_to product_path(@product), notice: 'Review created successfully!'
-  	else
-  		redirect_to product_path(@product), notice: 'You\'ve already reviewed this!'
-  	end
+    respond_to do |format|
+    	if @review.save
+    		format.html {redirect_to product_path(@product),
+          notice: 'Review created successfully!'}
+        format.js {}
+    	else
+    		format.html {redirect_to product_path(@product),
+           notice: 'You\'ve already reviewed this!'}
+        format.js {}   
+    	end
+    end
   end
 
   def destroy

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
   <title>Rainforest</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -8,13 +9,6 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  
-<div class="lang_toggle">
-  <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
-  |
-  <%= link_to_unless I18n.locale == :jp, "日本語", locale: :jp %>
-</div>
-
 
 
   <% if flash[:notice] %>
@@ -25,7 +19,12 @@
   <% end %>
 
   <%= yield %>
-
+  
+  <div class="lang_toggle">
+    <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+    |
+    <%= link_to_unless I18n.locale == :jp, "日本語", locale: :jp %>
+  </div>
     
   </body>
 </html>
