@@ -1,28 +1,14 @@
-== README
+A basic Amazon.com "clone."  Used by me to explore and solidify new rails concepts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Users have the ability to create accounts, sign in, log out, create new products and link images to the product.
+  (Not yet able to upload images)
 
-Things you may want to cover:
+New features learned:
 
-* Ruby version
+- Added a search function via the 'Ransack' gem
 
-* System dependencies
+- Created pagination via the 'will_paginate' gem
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Explored internationalization via the 'i18n' gem using the online tutorials as well as my own knowledge of the language.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
