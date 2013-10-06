@@ -1,6 +1,10 @@
 # ruby encoding: utf-8
  
 jp:
+  will_paginate:
+    previous_label: ＜＜　前
+    next_label: 次　＞＞
+    page_gap: "&hellip"
   products:
     index:
       title: レインフォレストなら、たくさん商品が有るよ！
