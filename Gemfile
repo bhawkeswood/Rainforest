@@ -37,9 +37,10 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
+# gem 'kaminari'
+gem 'will_paginate', '~> 3.0'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
+gem 'ransack'
 # Use debugger
 # gem 'debugger', group: [:development, :test]

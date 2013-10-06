@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   before_filter :ensure_logged_in, :only => [:show, :new]
 
   def index
-  	@products = Product.all
+    @search = Product.search(params[:q])
+  	@products = @search.result.order('name').paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html

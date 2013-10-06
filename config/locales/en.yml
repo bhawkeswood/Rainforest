@@ -30,6 +30,7 @@ en:
       current_num: "Currently, we have "
       products_available: " products available for viewing.  Would you like to add a "
       new_product: "New Product?"
+      search: "Search for:"
   views:
     show: Show
     edit: Edit

@@ -11,6 +11,7 @@ jp:
       current_num: 現在、
       products_available: つの商品が保存してあります。新しい商品
       new_product: 作りますか？
+      search: 検索
   views:
     show: 詳細
     edit: 編集

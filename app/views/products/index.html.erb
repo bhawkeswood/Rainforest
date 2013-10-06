@@ -14,11 +14,33 @@
         <%= link_to (t '.sign_up'), new_user_path %>
       <% end %></div>
 
-<p id="product_count"><%= t '.current_num' %><strong><%= @products.length %></strong><%= t '.products_available' %><%= link_to (t '.new_product'), new_product_path %>
-</p></div>
+    <p id="product_count"><%= t '.current_num' %>
+      <strong><%= @products.length %></strong>
+      <%= t '.products_available' %>
+      <%= link_to (t '.new_product'), new_product_path %>
+    </p>
+</div>
 
-<div class="info_box"><% @products.each do |product| %>
-	<div class="index_box"><div class="name_price"><%= link_to product.name, product %><br><div class="index_pic"><%= link_to image_tag(product.url) %></div>
-		 <p class="price"><%= number_to_currency(product.formatted_price) %></p></div></div>
+<div class="info_box">
+  <div class="pagination">
+    <div class="search">
+      <%= search_form_for @search do |f| %>
+      <div class="field">
+        <%= f.label :name_cont, (t '.search') %>
+        <%= f.text_field :name_cont %>
+      </div>
+      <% end %>
+    </div>
+    <%= will_paginate @products %>
+  </div>
+  <% @products.each do |product| %>
+	<div class="index_box">
+    <div class="name_price"><%= link_to product.name,product %><br>
+      <div class="index_pic"><%= link_to image_tag(product.url) %>
+      </div>
+		  <p class="price"><%= number_to_currency(product.formatted_price) %>
+      </p>
+  </div>
+</div>
 <% end %> 
 
